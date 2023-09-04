@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block center %}
+
+<br>
+    <h2 class="text-center m-4.+ "> Autenticação</h2>
+    <hr>
+
+    <div class="text-center m-4">
+
+      {% if messages %}
+      <ul class="messages">
+          {% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+          {% endfor %}
+      </ul>
+      {% endif %}
+      
+    </div>
+
+  
+
+ <div class="row">
+<div class="clo-md-4 mx-auto">
+    <form method="post" action="{% url 'login' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class=" center col-md-100%  m-4  shadow p-3 mb-5 bg-body-tertiary rounded" >
+
+  
+      <div class="text-center m-4">
+         <label for="exampleInputEmail1" class="form-label"><strong>Nome: </strong></label>
+          <input type="text" placeholder="" name="username">
+          <br><br>
+  
+          <label for="exampleInputPassword1" class="form-label"><strong>Senha:</strong></label>
+          <input type="password" placeholder="" name="senha">
+          <br><br>
+  
+  
+        <button type="submit" class="btn btn-success m-3">Enviar</button>
+        <a href="{% url 'index' %}" class="btn btn-secondary">Voltar</a>  
+  
+    </form>
+
+      </div>
+    </div>
+  
+</div>
+
+</div> 
+   
+  {% endblock %}
+
