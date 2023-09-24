@@ -16,15 +16,14 @@
         <p><strong>Nome da empresa: </strong>{{reservas.nome_empresa}}</p>
         <p><strong>Nome da categoria: </strong>{{reservas.categoria_empresa}}</p>
         <p><strong>Localização: </strong>{{reservas.localizacao}}</p>
-        <p><strong>Valor: </strong>{{reservas.valor}}</p>
 
 
         
         <br><br><br><br><br><br><br><br>
 
         <a href="{% url 'listar' %}" class="btn btn-secondary">voltar</a>
-        <a href="{% url 'editar' id=reservas.id %}" class="btn btn-primary">Editar</a>
-        <a href="{% url 'apagar' id=reservas.id %}" class="btn btn-danger">Apagar</a>
+        <a href="{% url 'editar' reservas.pk %}" class="btn btn-primary">Editar</a>
+        <a href="{% url 'apagar' reservas.pk %}" class="btn btn-danger">Apagar</a>
         
 
       </div>

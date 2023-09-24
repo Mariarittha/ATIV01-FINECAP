@@ -5,11 +5,8 @@ class Stand(models.Model):
     valor = models.FloatField()
     
     def __str__(self):
-        return f"Localizacao: {self.localizacao}"
+        return self.localizacao
     
-    def __str__(self):
-        return f"valor: {self.valor}"
-
 
 class Reserva(models.Model):
     cnpj = models.CharField(max_length=150)
@@ -18,6 +15,5 @@ class Reserva(models.Model):
     quitado = models.BooleanField(default=False)
     imagem =models.FileField(default=False)
     localizacao = models.ForeignKey(Stand, on_delete=models.CASCADE,  related_name='reservas_localizacao')
-    valor = models.ForeignKey(Stand, on_delete=models.CASCADE,  related_name='reservas_valor') 
     
    
