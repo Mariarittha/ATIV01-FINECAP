@@ -30,6 +30,8 @@ class Listar(ListView):
     template_name = "reservas/listar.html"
     model = Reserva
     context_object_name = 'reservas'
+    paginate_by = 3
+
 
 class Cadastrar(views.SuccessMessageMixin, generic.CreateView):
   model = Reserva
