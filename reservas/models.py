@@ -4,8 +4,10 @@ class Stand(models.Model):
     localizacao = models.CharField(max_length=150)
     valor = models.FloatField()
     
+    # def __str__(self):
+    #     return self.localizacao
     def __str__(self):
-        return self.localizacao
+        return f"{self.pk} | {self.localizacao} | {self.valor}"
     
 
 class Reserva(models.Model):

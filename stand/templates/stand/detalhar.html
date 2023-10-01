@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block center %}
+
+<div class="container text-center">
+    <div class="row">
+      
+      
+
+      <div class="col m-4 text-center">
+        <br><br><br><br>
+        <p><strong>Localização: </strong>{{stands.localizacao}}</p>
+        <p><strong>valor: </strong>{{stands.valor}}</p>
+        
+
+
+        
+        <br><br><br><br><br><br><br><br>
+
+        <a href="{% url 'stand:listarstand' %}" class="btn btn-secondary">voltar</a>
+        <a href="{% url 'stand:editarstand' stands.pk %}" class="btn btn-primary">Editar</a>
+        <a href="{% url 'stand:apagarstand' stands.pk %}" class="btn btn-danger">Apagar</a>
+        
+
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

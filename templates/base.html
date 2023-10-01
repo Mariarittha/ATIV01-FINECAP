@@ -17,7 +17,7 @@
 
        <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body " data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand text-primary" href="{% url 'index' %}">MR</a>
+          <a class="navbar-brand text-primary" href="{% url 'reservas:index' %}">MR</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -26,16 +26,15 @@
             
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'reservas:index' %}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'nos' %}">Nós</a>
+                <a class="nav-link" href="{% url 'reservas:nos' %}">Nós</a>
               </li>
               <li class="nav-item">
-                <!-- <a class="nav-link" href="{% url 'cadastrar' %}">Reservar</a> -->
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'mais' %}">Mais</a>
+                <a class="nav-link" href="{% url 'reservas:mais' %}">Mais</a>
               </li>
           
             </ul>

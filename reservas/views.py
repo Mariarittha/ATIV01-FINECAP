@@ -50,7 +50,7 @@ class Editar(views.SuccessMessageMixin, generic.UpdateView):
   model = Reserva
   form_class = ReservaForm
   template_name = "reservas/form.html"
-  success_url = reverse_lazy("listar")
+  success_url = reverse_lazy("detalhar")
   success_message = "Reserva atualizada com sucesso! " 
   
   def login(request):
