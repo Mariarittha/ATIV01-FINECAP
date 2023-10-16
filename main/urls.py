@@ -7,5 +7,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("reservas.urls", namespace="reservas")),
     path("", include("stand.urls", namespace="stand")),
+    path('accounts/', include('allauth.urls')), 
+
 ]
 

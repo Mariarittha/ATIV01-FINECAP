@@ -1,0 +1,17 @@
+{% extends 'base_logado.html' %}
+
+{% load static %}
+
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Sign Out" %}{% endblock head_title %}
+
+{% block center %}
+<br><br>
+<h1>PERFIL</h1>
+<a href="{% url 'account_logout' %}" class="btn-red">Sair </a>
+
+
+{% endblock center %}
+    

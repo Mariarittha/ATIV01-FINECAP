@@ -1,27 +1,139 @@
-{% extends 'base.html' %}
-
+{% extends 'base_logado.html' %}
 {% load static %}
+
 {% block center %}
 
-<body>
+<div class="w3-content" style="max-width:1500px;margin-top:46px">
 
-  <div class="text-center m-4">
-
-    <br><br><br><br><br> <br> <br>
-    <h1 class="m-1 text-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
-      </svg> Bem-vindo ao meu site de reservas <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721L8 2.42Zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063.045.041.089.084.132.129.043-.045.087-.088.132-.129 3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398Z"/>
-      </svg></h1>
-      <br><br><br><br><br> <br> <br>
-
-
-  </div>
-
-</body>
-
+    <!-- Automatic Slideshow Images -->
+    <!-- <div class="mySlides w3-display-container w3-center">
+      <img src="{% static 'img/show.jpg' %}" style="width:100%">
+      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+        <h3>Los Angeles</h3>
+        <p><b>We had the best time playing at Venice Beach!</b></p>   
+      </div>
+    </div> -->
   
-<!-- <img src="{% static 'img/gif.webp' %}"> -->
-
+    <!-- The Band Section -->
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+      <h2 class="w3-wide">MR</h2>
+      <p class="w3-opacity w3-animate-fading"><i>We love music</i></p>
+      <p class="w3-justify"> O mundo da música é repleto de momentos inesquecíveis. Cada acorde, cada nota e cada performance se 
+          tornam memórias que ecoam na alma dos amantes da música. É a experiência de estar lá, no local, que 
+          torna tudo ainda mais especial. O site <strong>MR</strong> entende isso como ninguém e se destaca como um 
+          portal especializado em reservas para shows, proporcionando acesso a esses momentos únicos.</p>
+  </p>
+      <div class="w3-row w3-padding-32">
+        <div class="w3-third">
+          <p>Avicii</p>
+          <img src="{% static 'img/Avicii.webp' %}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+        </div>
+        <div class="w3-third">
+          <p>Sulli</p>
+          <img src="{% static 'img/sul.webp' %}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+        </div>
+        <div class="w3-third">
+          <p>Tnbhd</p>
+          <img src="{% static 'img/t.webp' %}" class="w3-round" alt="Random Name" style="width:60%">
+        </div>
+      </div>
+    </div>
+  
+    <!-- The Tour Section -->
+    <div class="w3-black" id="tour">
+      <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+        <h2 class="w3-wide w3-center">Ingressos</h2>
+        <p class="w3-opacity w3-center w3-animate-fading"><i>Não esqueça de comprar seu ingresso!</i></p><br>
+  
+        <ul class="w3-ul w3-border w3-white w3-text-grey w3-panel w3-border w3-round-xlarge">
+          <li class="w3-padding">Setembro <span class="w3-tag w3-red w3-margin-left w3-animate-fading">Esgotado</span></li>
+          <li class="w3-padding">Outubro <span class="w3-tag w3-red w3-margin-left  w3-animate-fading">Esgotado</span></li>
+          <li class="w3-padding">Novembro <span class="w3-badge w3-right w3-margin-right">3</span></li>
+        </ul>
+  
+        <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+          <div class="w3-third w3-margin-bottom">
+            <img src="{% static 'img/mma.webp' %}" alt="New York" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+              <p><b>Pau dos Ferros</b></p>
+              <p class="w3-opacity">Sex 27 Nov 2023</p>
+              <p>Imperdível! Venha participar do maior evento do alto oeste, garanta já seu ingresso!</p>
+              <br>
+              <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Comprar ingresso</button>
+            </div>
+          </div>
+          <div class="w3-third w3-margin-bottom">
+            <img src="{% static 'img/mma.webp' %}" alt="Paris" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+              <p><b>Portalegre</b></p>
+              <p class="w3-opacity">Sab 28 Nov 2023</p>
+              <p>Imperdível! Venha participar do maior evento do alto oeste, garanta já seu ingresso!</p>
+              <br>
+              <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Comprar ingresso</button>
+            </div>
+          </div>
+          <div class="w3-third w3-margin-bottom">
+            <img src="{% static 'img/mma.webp' %}" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+              <p><b>Umarizal</b></p>
+              <p class="w3-opacity">Dom 29 Nov 2023</p>
+              <p>Imperdível! Venha participar do maior evento do alto oeste, garanta já seu ingresso!</p>
+              <br>
+              <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Comprar ingresso</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Ticket Modal -->
+    <div id="ticketModal" class="w3-modal">
+      <div class="w3-modal-content w3-animate-top w3-card-4">
+        <header class="w3-container w3-teal w3-center w3-padding-32"> 
+          <span onclick="document.getElementById('ticketModal').style.display='none'" 
+         class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+          <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+        </header>
+        <div class="w3-container">
+          <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
+          <input class="w3-input w3-border" type="text" placeholder="How many?">
+          <p><label><i class="fa fa-user"></i> Send To</label></p>
+          <input class="w3-input w3-border" type="text" placeholder="Enter email">
+          <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
+          <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+          <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- The Contact Section -->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+      <h2 class="w3-wide w3-center">CONTATO</h2>
+      <p class="w3-opacity w3-center w3-animate-fading"><i>Dúvidas? Converse com a gente!</i></p>
+      <div class="w3-row w3-padding-32">
+        <div class="w3-col m6 w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker" style="width:30px"></i> Rio grande do norte, RN<br>
+          <i class="fa fa-phone" style="width:30px"></i> Telefone: +84 151515<br>
+          <i class="fa fa-envelope" style="width:30px"> </i> Email: mariaritha91@mail.com<br>
+        </div>
+        <div class="w3-col m6">
+          <form action="/action_page.php" target="_blank">
+            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+              <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Nome" required name="Name">
+              </div>
+              <div class="w3-half">
+                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+              </div>
+            </div>
+            <input class="w3-input w3-border" type="text" placeholder="Mensagem" required name="Message">
+            <button class="w3-button w3-black w3-section w3-right" type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+  <!-- End Page Content -->
+  </div>
 
 {% endblock %}

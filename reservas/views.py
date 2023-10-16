@@ -11,8 +11,15 @@ from django.views import generic
 from django.urls import reverse_lazy
 from django.contrib.messages import views
 
+
 class Index(generic.TemplateView):
     template_name = "reservas/index.html"
+    
+class perfil(generic.TemplateView):
+    template_name = "reservas/perfil.html"
+    
+class Index_nao(generic.TemplateView):
+    template_name = "nao_logado/index.html"
     
 class Mais(generic.TemplateView):
     template_name = "reservas/mais.html"
