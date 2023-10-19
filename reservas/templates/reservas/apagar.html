@@ -2,6 +2,8 @@
 
 
 {% block center %}
+<br><br><br><br><br><br><br>
+
 <h3 class="m-3 text-center">Excluir Reserva</h3>
 
 <div class="m-3 text-center">
@@ -9,6 +11,7 @@
     <form method="post">
         <section class="form container-fluid p-5x ">
             {% csrf_token %}
+
                 <p> Você tem certeza que quer apagar esta reserva?</p>
                 {{ form }}
         </section>
@@ -20,4 +23,7 @@
 
 
     </form>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+
 {% endblock %}
