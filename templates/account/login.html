@@ -26,12 +26,10 @@
           </div>
 
           <!-- formulario -->
-    
-          <form class="login" method="POST" action="{% url 'reservas:index' %}">
+    <!-- pata teste: {% url 'reservas:index' %} -->
+          <form class="login" method="POST" action="{% url 'account_login' %}"> 
             {% csrf_token %}
             {{ form.as_p }}
-
-
             <div class="w3-text-black">
             {% if redirect_field_value %}
             <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
@@ -51,6 +49,7 @@
               </div>
             </div>
           </form>
+           
 <!-- fim do forms -->
         </div>
       </div>

@@ -20,7 +20,6 @@ body {font-family: "Lato", sans-serif}
 <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-large w3-animate-left w3-black " style="display:none;z-index:2;width:10%;min-width:300px" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()"
   class="w3-bar-item w3-button">Fechar</a>
-  <a href="{% url 'reservas:perfil'%}" onclick="w3_close()" class="w3-bar-item w3-button">Perfil</a>
   <a href="{% url 'reservas:listar'%}" onclick="w3_close()" class="w3-bar-item w3-button">Reservas</a>
   <a href="{% url 'stand:listarstand'%}" onclick="w3_close()" class="w3-bar-item w3-button">Stands</a>
   <a href="{% url 'reservas:mais'%}" onclick="w3_close()" class="w3-bar-item w3-button">Formulários</a>
@@ -33,9 +32,18 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-black w3-card">
     
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-left" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+  
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-left" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
     </svg></div>
+    
+    <a href="{% url 'account_logout' %}" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+      <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+    </svg> </a>
+
+
     <a href="{% url 'reservas:perfil' %}" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
       <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
     </svg></a>

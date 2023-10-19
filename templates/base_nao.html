@@ -26,9 +26,9 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-top">
     <div class="w3-bar w3-black w3-card">
       <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="{% url 'reservas:index_nao' %}" class="w3-bar-item w3-button w3-padding-large" >HOME</a>
-      <a href="{% url 'reservas:nos' %}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">NÓS</a>
-      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTATO</a>
+      <a href="{% url 'reservas:index_nao' %}" class="w3-bar-item w3-button w3-padding-large w3-ripple" >HOME</a>
+      <a href="{% url 'reservas:nos' %}" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-ripple">NÓS</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-ripple">CONTATO</a>
       <!-- {% url 'account_login' %} -->
       <a href="{% url 'account_login' %}" onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-padding-large w3-hide-small w3-right w3-hover-blue"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg> Entrar</i></a>
