@@ -1,21 +1,57 @@
-{% extends "account/base.html" %}
+{% extends "base_nao.html" %}
 
 {% load i18n %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock head_title %}
 
-{% block content %}
-<h1>{% trans "Sign Up" %}</h1>
+{% block center %}
+  
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+ 
+<br><br>
+  <div class="container vh-100" style="background-color:white;">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1 class="text-center">{% trans "Sign Up" %}</h1>
 
-<form class="signup" id="signup_form" method="post" action="{% url 'account_login' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
 
-{% endblock content %}
+            <form class="signup p-4 rounded" id="signup_form" method="post" action="{% url 'account_signup' %}">
+                {% csrf_token %}
+               
+                <div class="form-group">
+                  {{ form.username.label_tag }}
+                  <input type="text" name="{{ form.username.name }}" id="{{ form.username.id }}" class="w3-input w3-animate-input" >
+              </div>
+              <br>
+                <div class="form-group">
+                  {{ form.email.label_tag }}
+                  <input type="email" name="{{ form.email.name }}" id="{{ form.email.id }}" class="w3-input w3-animate-input" >
+              </div>
+                             
+              <br>
+                <div class="form-group">
+                  {{ form.password1.label_tag }}
+                  <input type="password" name="{{ form.password1.name }}" id="{{ form.password1.id }}" class="w3-input w3-animate-input" >
+              </div>
+              
+                <br>
+                <div class="form-group">
+                  {{ form.password2.label_tag }}
+                  <input type="password" name="{{ form.password2.name }}" id="{{ form.password2.id }}" class="w3-input w3-animate-input" >
+              </div>
+              
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                <br>
+                <button class="w3-button w3-round-large w3-grey w3-left" type="submit">Cadastrar</button>
+                <p class="text-center w3-right">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock center %}
