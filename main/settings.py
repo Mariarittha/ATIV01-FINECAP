@@ -89,6 +89,7 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
+LOGOUT_REDIRECT_URL = "reservas:index_nao"
 LOGIN_REDIRECT_URL = "reservas:index"
 ACCOUNT_ALLOW_REGISTRATION = True
 

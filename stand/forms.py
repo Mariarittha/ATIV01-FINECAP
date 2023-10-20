@@ -10,6 +10,8 @@ class StandForm(ModelForm):
 
         widgets = {
             'localizacao' : forms.TextInput(attrs={'class': 'form-control'}),
+            
+            
             'valor' : forms.TextInput(attrs={'class': 'form-control' }),
             
         }
